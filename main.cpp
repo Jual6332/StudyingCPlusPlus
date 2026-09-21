@@ -13,6 +13,13 @@ class Car{
 		int mpg;
 		int age;
 
+		// Constructor
+		Car(int miles, string mk, string mdl, string nick, int mpgVal, int ageVal)
+			: num_miles(miles), make(mk), model(mdl), nickname(nick), mpg(mpgVal), age(ageVal)
+		{
+			// body can stay empty since the initializer list did the work
+		}
+
 	void printNummiles(){
 		cout << "The car has : "<< num_miles << " miles" << endl;
 	}
@@ -36,29 +43,9 @@ class Car{
 
 int main(){
 	// Create new Car objects (instances of the class)
-	Car car1;
-	car1.num_miles = 160000;
-	car1.make = "Honda";
-	car1.model = "Accord";
-	car1.nickname = "Old Reliable";
-	car1.mpg = 26;
-	car1.age = 12;
-
-	Car car2;
-	car2.num_miles = 60000;
-	car2.make = "Ford";
-	car2.model = "F-150";
-	car2.nickname = "Big Rig";
-	car2.mpg = 16;
-	car2.age = 5;
-
-	Car car3;
-	car3.num_miles = 210000;
-	car3.make = "Toyota";
-	car3.model = "Camry";
-	car3.nickname = "muy Reliables";
-	car3.mpg = 22;
-	car3.age = 19;
+	Car car1(160000, "Honda", "Accord", "Old Reliable", 26, 12);
+	Car car2(60000, "Ford", "F-150", "Big Rig", 16, 5);
+	Car car3(210000, "Toyota", "Camry", "muy Reliables", 22, 19);
 
 	// Print the cars details to the screen
 	car3.printNummiles();
@@ -74,7 +61,7 @@ int main(){
 	inventoryOfCars.push_back(car3);
 
 	// Loop through vector
-	for (uint i=0;i<inventoryOfCars.size();i++){
+	for (size_t i=0;i<inventoryOfCars.size();i++){
 		if (inventoryOfCars[i].make == "Honda"){
 			cout << "Car #" << i << " is a Honda"<< endl;
 		}else{
@@ -82,6 +69,5 @@ int main(){
 		}
 	}
 
-	//cout << "Print!"<< endl;
 	return 0;
 }
