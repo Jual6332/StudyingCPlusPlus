@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -49,6 +50,10 @@ int main(){
 	car1.printCarmodel();
 	car1.printmpg();
 	car1.printage();
+
+	// Declare vector for Inventory of Cars
+	vector<Car> inventoryOfCars;
+	inventoryOfCars.push_back(car1);
 
 	//cout << "Print!"<< endl;
 	return 0;
