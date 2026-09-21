@@ -52,18 +52,26 @@ int main(){
 	car2.mpg = 16;
 	car2.age = 5;
 
+	Car car3;
+	car3.num_miles = 210000;
+	car3.make = "Toyota";
+	car3.model = "Camry";
+	car3.nickname = "muy Reliables";
+	car3.mpg = 22;
+	car3.age = 19;
+
 	// Print the cars details to the screen
-	car2.printNummiles();
-	car2.printCarmake();
-	car2.printCarmodel();
-	car2.printmpg();
-	car2.printage();
-	
+	car3.printNummiles();
+	car3.printCarmake();
+	car3.printCarmodel();
+	car3.printmpg();
+	car3.printage();
 
 	// Declare vector for Inventory of Cars
 	vector<Car> inventoryOfCars;
 	inventoryOfCars.push_back(car1);
 	inventoryOfCars.push_back(car2);
+	inventoryOfCars.push_back(car3);
 
 	//cout << "Print!"<< endl;
 	return 0;
