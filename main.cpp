@@ -13,6 +13,12 @@ class Car{
 		int mpg;
 		int age;
 
+		// Default constructor — used when no arguments are given
+		Car() : num_miles(0), make(""), model(""), nickname(""), mpg(0), age(0)
+		{
+			// empty body — initializer list handles everything
+		}
+
 		// Constructor
 		Car(int miles, string mk, string mdl, string nick, int mpgVal, int ageVal)
 			: num_miles(miles), make(mk), model(mdl), nickname(nick), mpg(mpgVal), age(ageVal)
