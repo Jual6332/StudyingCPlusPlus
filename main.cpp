@@ -35,7 +35,7 @@ class Car{
 };
 
 int main(){
-	// Create new Car object (instance of the class)
+	// Create new Car objects (instances of the class)
 	Car car1;
 	car1.num_miles = 160000;
 	car1.make = "Honda";
@@ -44,16 +44,26 @@ int main(){
 	car1.mpg = 26;
 	car1.age = 12;
 
+	Car car2;
+	car2.num_miles = 60000;
+	car2.make = "Ford";
+	car2.model = "F-150";
+	car2.nickname = "Big Rig";
+	car2.mpg = 16;
+	car2.age = 5;
+
 	// Print the cars details to the screen
-	car1.printNummiles();
-	car1.printCarmake();
-	car1.printCarmodel();
-	car1.printmpg();
-	car1.printage();
+	car2.printNummiles();
+	car2.printCarmake();
+	car2.printCarmodel();
+	car2.printmpg();
+	car2.printage();
+	
 
 	// Declare vector for Inventory of Cars
 	vector<Car> inventoryOfCars;
 	inventoryOfCars.push_back(car1);
+	inventoryOfCars.push_back(car2);
 
 	//cout << "Print!"<< endl;
 	return 0;
