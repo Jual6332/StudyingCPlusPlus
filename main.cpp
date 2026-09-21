@@ -73,6 +73,15 @@ int main(){
 	inventoryOfCars.push_back(car2);
 	inventoryOfCars.push_back(car3);
 
+	// Loop through vector
+	for (uint i=0;i<inventoryOfCars.size();i++){
+		if (inventoryOfCars[i].make == "Honda"){
+			cout << "Car #" << i << " is a Honda"<< endl;
+		}else{
+			cout << "Car #" << i << " is not a Honda"<< endl;
+		}
+	}
+
 	//cout << "Print!"<< endl;
 	return 0;
 }
